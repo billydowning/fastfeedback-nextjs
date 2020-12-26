@@ -20,6 +20,11 @@ export default function Home() {
           Sign In
         </button>
         <div>{auth?.user?.email}</div>
+        {auth?.user && (
+          <button className="ui primary button" onClick={(e) => auth.signout()}>
+            Sign Out
+          </button>
+        )}
       </main>
 
       <footer className={styles.footer}>
