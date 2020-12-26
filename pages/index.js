@@ -17,7 +17,7 @@ export default function Home() {
           className="ui primary button"
           onClick={(e) => auth.signinWithGitHub()}
         >
-          Sign In
+          Sign In with Github
         </button>
         <div>{auth?.user?.email}</div>
         {auth?.user && (

@@ -2,7 +2,7 @@ import Head from "next/head";
 import "../styles/globals.css";
 import { AuthProvider } from "../lib/auth";
 
-function MyApp({ Component, pageProps }) {
+const App = ({ Component, pageProps }) => {
   return (
     <AuthProvider>
       <Head>
@@ -14,6 +14,6 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
     </AuthProvider>
   );
-}
+};
 
-export default MyApp;
+export default App;
