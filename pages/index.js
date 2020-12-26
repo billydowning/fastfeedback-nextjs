@@ -13,17 +13,28 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>I'm feeling supersonic</h1>
-        <button
-          className="ui primary button"
-          onClick={(e) => auth.signinWithGitHub()}
-        >
-          Sign In with Github
-        </button>
-        <div>{auth?.user?.email}</div>
-        {auth?.user && (
+        <div>Current user: {auth.user.email}</div>
+        {auth.user ? (
           <button className="ui primary button" onClick={(e) => auth.signout()}>
             Sign Out
           </button>
+        ) : (
+          <div>
+            <button
+              className="ui primary button"
+              style={{ margin: "10px" }}
+              onClick={(e) => auth.signinWithGitHub()}
+            >
+              Sign In with Github
+            </button>
+            <button
+              className="ui red button"
+              style={{ margin: "10px" }}
+              onClick={(e) => auth.signinWithGoogle()}
+            >
+              Sign In with Google
+            </button>
+          </div>
         )}
       </main>
 
