@@ -1,6 +1,7 @@
 import React from "react";
 import NextLink from "next/link";
 import { Box, Button, Flex, Link, Avatar, Icon } from "@chakra-ui/react";
+import DogLogo from "@/components/DogLogo";
 
 import { useAuth } from "@/lib/auth";
 //import Footer from './Footer';
@@ -14,7 +15,7 @@ const DashboardShell = ({ children }) => {
         backgroundColor="white"
         mb={[8, 16]}
         w="full"
-        borderTop="5px solid #0AF5F4"
+        borderTop="10px solid #4FA725"
       >
         <Flex
           alignItems="center"
@@ -30,11 +31,13 @@ const DashboardShell = ({ children }) => {
           <Flex align="center">
             <NextLink href="/" passHref>
               <Link>
-                <Icon name="logo" size="24px" mr={8} />
+                <DogLogo w="54" h="54" />
               </Link>
             </NextLink>
             <NextLink href="/sites" passHref>
-              <Link mr={4}>Sites</Link>
+              <Link mr={4} ml={4}>
+                Sites
+              </Link>
             </NextLink>
             <NextLink href="/feedback" passHref>
               <Link>Feedback</Link>
@@ -52,7 +55,6 @@ const DashboardShell = ({ children }) => {
       <Flex margin="0 auto" direction="column" maxW="1250px" px={[0, 8, 8]}>
         {children}
       </Flex>
-      //
     </Box>
   );
 };

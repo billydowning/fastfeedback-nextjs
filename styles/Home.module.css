@@ -1,4 +1,4 @@
-.container {
+/*.container {
   min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
@@ -113,6 +113,11 @@
 .logo {
   height: 1em;
 }
+.navbar {
+  display: flex;
+  max-width: 1000px;
+  margin-top: 3rem;
+}
 
 @media (max-width: 600px) {
   .grid {
@@ -120,3 +125,4 @@
     flex-direction: column;
   }
 }
+*/
