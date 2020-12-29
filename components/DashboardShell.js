@@ -225,6 +225,30 @@ const DashboardShell = ({ children }) => {
                         <Avatar size="xs" />
                         <ListItem color="#c0c0c0">Activity item</ListItem>
                       </Stack>
+                      <Stack spacing={4} isInline>
+                        <Avatar size="xs" />
+                        <ListItem color="#c0c0c0">Activity item</ListItem>
+                      </Stack>
+                      <Stack spacing={4} isInline>
+                        <Avatar size="xs" />
+                        <ListItem color="#c0c0c0">Activity item</ListItem>
+                      </Stack>
+                      <Stack spacing={4} isInline>
+                        <Avatar size="xs" />
+                        <ListItem color="#c0c0c0">Activity item</ListItem>
+                      </Stack>
+                      <Stack spacing={4} isInline>
+                        <Avatar size="xs" />
+                        <ListItem color="#c0c0c0">Activity item</ListItem>
+                      </Stack>
+                      <Stack spacing={4} isInline>
+                        <Avatar size="xs" />
+                        <ListItem color="#c0c0c0">Activity item</ListItem>
+                      </Stack>
+                      <Stack spacing={4} isInline>
+                        <Avatar size="xs" />
+                        <ListItem color="#c0c0c0">Activity item</ListItem>
+                      </Stack>
                     </Stack>
                   </List>
                 </Stack>
