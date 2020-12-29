@@ -2,11 +2,11 @@ import DashboardShell from "@/components/DashboardShell";
 import { useAuth } from "@/lib/auth";
 
 const Dashboard = () => {
-  const auth = useAuth();
+  // const auth = useAuth();
 
-  if (!auth.user) {
-    return "Loading...";
-  }
+  // if (!auth.user) {
+  //   return "Loading...";
+  // }
 
   return <DashboardShell />;
 };

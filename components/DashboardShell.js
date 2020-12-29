@@ -137,6 +137,70 @@ const DashboardShell = ({ children }) => {
                     />
                   </Stack>
                 </Stack>
+                <Stack
+                  spacing={20}
+                  isInline
+                  justifyContent="space-around"
+                  alignItems="center"
+                  border="1px solid #C3C3C3"
+                  borderRadius={8}
+                  minWidth="40vw"
+                >
+                  <Stack
+                    spacing={2}
+                    isInline
+                    justifyContent="flex-start"
+                    alignItems="center"
+                  >
+                    <Avatar size="md" mr="25px" />
+                    <List>
+                      <ListItem color="#c0c0c0">Name:</ListItem>
+                      <ListItem color="#c0c0c0">Date: </ListItem>
+                      <ListItem color="#c0c0c0">Time:</ListItem>
+                      <ListItem color="#c0c0c0">Location:</ListItem>
+                      <ListItem color="#c0c0c0">Status:</ListItem>
+                    </List>
+                  </Stack>
+                  <Stack spacing={2}>
+                    <IconButton
+                      aria-label="icon"
+                      icon={<CalendarIcon />}
+                      size="md"
+                    />
+                  </Stack>
+                </Stack>
+                <Stack
+                  spacing={20}
+                  isInline
+                  justifyContent="space-around"
+                  alignItems="center"
+                  border="1px solid #C3C3C3"
+                  borderRadius={8}
+                  minWidth="40vw"
+                >
+                  <Stack
+                    spacing={2}
+                    isInline
+                    justifyContent="flex-start"
+                    alignItems="center"
+                  >
+                    <Avatar size="md" mr="25px" />
+                    <List>
+                      <ListItem color="#c0c0c0">Name:</ListItem>
+                      <ListItem color="#c0c0c0">Date: </ListItem>
+                      <ListItem color="#c0c0c0">Time:</ListItem>
+                      <ListItem color="#c0c0c0">Location:</ListItem>
+                      <ListItem color="#c0c0c0">Status:</ListItem>
+                    </List>
+                  </Stack>
+                  <Stack spacing={2}>
+                    <IconButton
+                      aria-label="icon"
+                      icon={<CalendarIcon />}
+                      size="md"
+                    />
+                  </Stack>
+                </Stack>
               </Stack>
               <Stack spacing={2}>
                 <Stack spacing={2} color="#c0c0c0">
