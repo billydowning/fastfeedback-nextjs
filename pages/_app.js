@@ -11,6 +11,7 @@ const App = ({ Component, pageProps }) => {
       <>
         <Head>
           <meta content="width=device-width, initial-scale=1" name="viewport" />
+          <title>YrLang.com</title>
         </Head>
         <CSSReset />
         <Global

@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Fast Feedback</title>
+        <title>YrLang.com</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -34,15 +34,15 @@ export default function Home() {
         >
           <Heading size="3xl">I'm feeling supersonic</Heading>
           <DogLogo w="128" h="128" />
-          <h3>Current User: {auth.user ? auth.user.email : "None"}</h3>
+          <Heading size="md">
+            Current User: {auth.user ? auth.user.email : "None"}
+          </Heading>
           {auth.user ? (
             <>
               <Button onClick={(e) => auth.signout()}>Sign Out</Button>
               <Button>
                 <NextLink href="/dashboard" passHref>
-                  <Link mr={4} ml={4}>
-                    Dashboard
-                  </Link>
+                  Dashboard
                 </NextLink>
               </Button>
             </>

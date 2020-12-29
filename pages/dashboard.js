@@ -1,4 +1,4 @@
-import FreePlanEmptyState from "@/components/FreePlanEmptyState";
+import DashboardShell from "@/components/DashboardShell";
 import { useAuth } from "@/lib/auth";
 
 const Dashboard = () => {
@@ -8,7 +8,7 @@ const Dashboard = () => {
     return "Loading...";
   }
 
-  return <FreePlanEmptyState />;
+  return <DashboardShell />;
 };
 
 export default Dashboard;
