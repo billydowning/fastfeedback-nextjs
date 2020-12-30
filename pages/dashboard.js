@@ -1,14 +1,16 @@
 import DashboardShell from "@/components/DashboardShell";
+import Overview from "@/components/Overview";
+
 import { useAuth } from "@/lib/auth";
 
-const Dashboard = () => {
+const dashboard = () => {
   // const auth = useAuth();
 
   // if (!auth.user) {
   //   return "Loading...";
   // }
 
-  return <DashboardShell />;
+  return <Overview />;
 };
 
-export default Dashboard;
+export default dashboard;
