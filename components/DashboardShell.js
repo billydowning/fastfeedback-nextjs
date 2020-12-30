@@ -33,27 +33,37 @@ const DashboardShell = ({ children }) => {
           border="1px solid #C3C3C3"
           height="10vh"
         >
-          <Stack spacing={10} isInline alignItems="center">
-            <ArrowUpDownIcon
-              ml="10px"
-              width="32px"
-              height="32px"
-              color="#f3f3f3"
-            />
+          <Stack spacing={10} isInline alignItems="center" ml={8}>
+            <NextLink href="/" passHref>
+              <Link>
+                <DogLogo h="64" w="64" />
+              </Link>
+            </NextLink>
             <Input placeholder="Search" variant="outline" color="#c0c0c0" />
           </Stack>
-          <Stack spacing={8} isInline alignItems="center" color="#dbdbdb">
+          <Stack
+            spacing={8}
+            isInline
+            alignItems="center"
+            color="#dbdbdb"
+            mr={8}
+          >
             <Link>Join Us</Link>
             <Link>Community</Link>
             <Link>Support</Link>
             <Link>Messages</Link>
-            <Avatar mr="20px" size="sm" />
+            <NextLink href="/" passHref>
+              <Link>
+                <Avatar mr="20px" size="sm" src={auth.user?.photoUrl} />
+              </Link>
+            </NextLink>
           </Stack>
         </Flex>
         <Flex
           justifyContent="flex-start"
           backgroundColor="#111111"
           border="1px solid #C3C3C3"
+          borderRadius={8}
         >
           <Container minWidth="75vw">
             <Flex
@@ -62,7 +72,7 @@ const DashboardShell = ({ children }) => {
               alignItems="center"
             >
               <Flex m="10px">
-                <Avatar size="lg" />
+                <Avatar size="lg" src={auth.user?.photoUrl} />
               </Flex>
               <Stack spacing={2} m="10px">
                 <Heading color="#c0c0c0" size="lg" mt="10px">
@@ -99,7 +109,7 @@ const DashboardShell = ({ children }) => {
               m="20px"
               alignItems="flex-start"
             >
-              <Stack spacing={2}>
+              <Stack spacing={4}>
                 <Stack spacing={2}>
                   <Heading color="#c0c0c0" size="sm">
                     Upcoming Appointments:
@@ -120,7 +130,7 @@ const DashboardShell = ({ children }) => {
                     justifyContent="flex-start"
                     alignItems="center"
                   >
-                    <Avatar size="md" mr="25px" />
+                    <Avatar size="lg" mr="25px" src={auth.user?.photoUrl} />
                     <List>
                       <ListItem color="#c0c0c0">Name:</ListItem>
                       <ListItem color="#c0c0c0">Date: </ListItem>
@@ -152,7 +162,7 @@ const DashboardShell = ({ children }) => {
                     justifyContent="flex-start"
                     alignItems="center"
                   >
-                    <Avatar size="md" mr="25px" />
+                    <Avatar size="lg" mr="25px" src={auth.user?.photoUrl} />
                     <List>
                       <ListItem color="#c0c0c0">Name:</ListItem>
                       <ListItem color="#c0c0c0">Date: </ListItem>
@@ -184,7 +194,7 @@ const DashboardShell = ({ children }) => {
                     justifyContent="flex-start"
                     alignItems="center"
                   >
-                    <Avatar size="md" mr="25px" />
+                    <Avatar size="lg" mr="25px" src={auth.user?.photoUrl} />
                     <List>
                       <ListItem color="#c0c0c0">Name:</ListItem>
                       <ListItem color="#c0c0c0">Date: </ListItem>
@@ -210,44 +220,54 @@ const DashboardShell = ({ children }) => {
                   <List>
                     <Stack spacing={4}>
                       <Stack spacing={4} isInline>
-                        <Avatar size="xs" />
+                        <Avatar size="xs" src={auth.user?.photoUrl} />
                         <ListItem color="#c0c0c0">Activity item</ListItem>
+                        <ListItem color="#c0c0c0">1h</ListItem>
                       </Stack>
                       <Stack spacing={4} isInline>
-                        <Avatar size="xs" />
+                        <Avatar size="xs" src={auth.user?.photoUrl} />
                         <ListItem color="#c0c0c0">Activity item</ListItem>
+                        <ListItem color="#c0c0c0">2h</ListItem>
                       </Stack>
                       <Stack spacing={4} isInline>
-                        <Avatar size="xs" />
+                        <Avatar size="xs" src={auth.user?.photoUrl} />
                         <ListItem color="#c0c0c0">Activity item</ListItem>
+                        <ListItem color="#c0c0c0">4h</ListItem>
                       </Stack>
                       <Stack spacing={4} isInline>
-                        <Avatar size="xs" />
+                        <Avatar size="xs" src={auth.user?.photoUrl} />
                         <ListItem color="#c0c0c0">Activity item</ListItem>
+                        <ListItem color="#c0c0c0">6h</ListItem>
                       </Stack>
                       <Stack spacing={4} isInline>
-                        <Avatar size="xs" />
+                        <Avatar size="xs" src={auth.user?.photoUrl} />
                         <ListItem color="#c0c0c0">Activity item</ListItem>
+                        <ListItem color="#c0c0c0">1d</ListItem>
                       </Stack>
                       <Stack spacing={4} isInline>
-                        <Avatar size="xs" />
+                        <Avatar size="xs" src={auth.user?.photoUrl} />
                         <ListItem color="#c0c0c0">Activity item</ListItem>
+                        <ListItem color="#c0c0c0">1d</ListItem>
                       </Stack>
                       <Stack spacing={4} isInline>
-                        <Avatar size="xs" />
+                        <Avatar size="xs" src={auth.user?.photoUrl} />
                         <ListItem color="#c0c0c0">Activity item</ListItem>
+                        <ListItem color="#c0c0c0">2d</ListItem>
                       </Stack>
                       <Stack spacing={4} isInline>
-                        <Avatar size="xs" />
+                        <Avatar size="xs" src={auth.user?.photoUrl} />
                         <ListItem color="#c0c0c0">Activity item</ListItem>
+                        <ListItem color="#c0c0c0">2d</ListItem>
                       </Stack>
                       <Stack spacing={4} isInline>
-                        <Avatar size="xs" />
+                        <Avatar size="xs" src={auth.user?.photoUrl} />
                         <ListItem color="#c0c0c0">Activity item</ListItem>
+                        <ListItem color="#c0c0c0">3d</ListItem>
                       </Stack>
                       <Stack spacing={4} isInline>
-                        <Avatar size="xs" />
+                        <Avatar size="xs" src={auth.user?.photoUrl} />
                         <ListItem color="#c0c0c0">Activity item</ListItem>
+                        <ListItem color="#c0c0c0">5d</ListItem>
                       </Stack>
                     </Stack>
                   </List>

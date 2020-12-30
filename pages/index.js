@@ -25,16 +25,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Box>
+      <Box backgroundColor="#121212">
         <VStack
           justifyContent="center"
           alignItems="center"
           h="100vh"
           spacing={6}
         >
-          <Heading size="3xl">I'm feeling supersonic</Heading>
+          <Heading size="3xl" color="#c0c0c0" mb={8}>
+            I'm feeling supersonic
+          </Heading>
           <DogLogo w="128" h="128" />
-          <Heading size="md">
+          <Heading size="md" color="#c0c0c0">
             Current User: {auth.user ? auth.user.email : "None"}
           </Heading>
           {auth.user ? (
