@@ -30,7 +30,7 @@ export default function Home() {
           justifyContent="center"
           alignItems="center"
           h="100vh"
-          spacing={6}
+          spacing={4}
         >
           <Heading size="3xl" color="#c0c0c0" mb={8}>
             I'm feeling supersonic
