@@ -1,5 +1,4 @@
 import Head from "next/head";
-import "../styles/globals.css";
 import { AuthProvider } from "@/lib/auth";
 import { ThemeProvider, CSSReset } from "@chakra-ui/react";
 import customTheme from "@/styles/theme";
@@ -22,7 +21,7 @@ const App = ({ Component, pageProps }) => {
             #__next {
               display: flex;
               flex-direction: column;
-              min-height: 100vh;
+              min-height: "100vh";
             }
           `}
         />
@@ -30,7 +29,6 @@ const App = ({ Component, pageProps }) => {
       </>
     );
   };
-
   return (
     <ThemeProvider theme={customTheme}>
       <AuthProvider>

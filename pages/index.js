@@ -1,6 +1,5 @@
 import Head from "next/head";
 import NextLink from "next/link";
-import styles from "../styles/Home.module.css";
 import { useAuth } from "@/lib/auth";
 import {
   Button,
@@ -12,11 +11,12 @@ import {
   Flex,
   VStack,
   Link,
+  Image,
 } from "@chakra-ui/react";
 import DogLogo from "@/components/DogLogo";
 import Menu from "@/components/Menu";
 
-export default function Home() {
+const Home = () => {
   const auth = useAuth();
   return (
     <div>
@@ -35,7 +35,7 @@ export default function Home() {
           <Heading size="3xl" color="#c0c0c0" mb={8}>
             I'm feeling supersonic
           </Heading>
-          <DogLogo w="128" h="128" />
+          <Image h="64" w="64" src="/snow_globe.svg" />
           <Heading size="md" color="#c0c0c0">
             Current User: {auth.user ? auth.user.email : "None"}
           </Heading>
@@ -70,4 +70,6 @@ export default function Home() {
       </Box>
     </div>
   );
-}
+};
+
+export default Home;
