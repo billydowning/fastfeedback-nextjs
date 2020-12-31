@@ -1,5 +1,6 @@
 import DashboardShell from "@/components/DashboardShell";
 import Overview from "@/components/Overview";
+import EmptyState from "@/components/EmptyState";
 
 import { useAuth } from "@/lib/auth";
 
@@ -10,7 +11,7 @@ const dashboard = () => {
   //   return "Loading...";
   // }
 
-  return <Overview />;
+  return <EmptyState />;
 };
 
 export default dashboard;
