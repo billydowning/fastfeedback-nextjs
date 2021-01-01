@@ -10,7 +10,6 @@ const dashboard = () => {
   // if (!auth.user) {
   //   return "Loading...";
   // }
-
   return <EmptyState />;
 };
 

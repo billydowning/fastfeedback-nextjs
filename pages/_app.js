@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { AuthProvider } from "@/lib/auth";
-import { ThemeProvider, CSSReset } from "@chakra-ui/react";
-import customTheme from "@/styles/theme";
+import { ChakraProvider } from "@chakra-ui/react";
+import theme from "@/styles/theme";
 import { Global, css } from "@emotion/react";
 
 const App = ({ Component, pageProps }) => {
@@ -12,7 +12,6 @@ const App = ({ Component, pageProps }) => {
           <meta content="width=device-width, initial-scale=1" name="viewport" />
           <title>YrLang.com</title>
         </Head>
-        <CSSReset />
         <Global
           styles={css`
             html {
@@ -23,6 +22,9 @@ const App = ({ Component, pageProps }) => {
               flex-direction: column;
               min-height: "100vh";
             }
+            @font-face {
+              font-family: "Inter";
+            }
           `}
         />
         {children}
@@ -30,12 +32,12 @@ const App = ({ Component, pageProps }) => {
     );
   };
   return (
-    <ThemeProvider theme={customTheme}>
+    <ChakraProvider theme={theme}>
       <AuthProvider>
         <GlobalStyle />
         <Component {...pageProps} />
       </AuthProvider>
-    </ThemeProvider>
+    </ChakraProvider>
   );
 };
 
