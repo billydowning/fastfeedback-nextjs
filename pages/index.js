@@ -14,7 +14,6 @@ import {
   Image,
 } from "@chakra-ui/react";
 import DogLogo from "@/components/DogLogo";
-import Menu from "@/components/Menu";
 
 const Home = () => {
   const auth = useAuth();
