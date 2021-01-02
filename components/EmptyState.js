@@ -23,7 +23,7 @@ const EmptyState = () => {
 
   return (
     <DashboardShell>
-      <Flex backgroundColor="#111111" height="vh">
+      <Flex backgroundColor="#0A2540" height="vh">
         <Container minWidth="75vw" minHeight="75vh">
           <Flex justifyContent="center" />
           <Stack
@@ -32,7 +32,7 @@ const EmptyState = () => {
             m="20px"
             alignItems="flex-start"
           >
-            <Stack spacing={4} backgroundColor="#111111" h="100vh">
+            <Stack spacing={4} backgroundColor="#0A2540" h="100vh">
               <Container>
                 <Stack
                   spacing={2}

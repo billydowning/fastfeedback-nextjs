@@ -24,12 +24,12 @@ const DashboardShell = ({ children }) => {
   const auth = useAuth();
 
   return (
-    <ChakraProvider resetCSS>
+    <ChakraProvider>
       <Flex justifyContent="flex-start" flexDirection="column">
         <Flex
           justifyContent="space-between"
           alignItems="center"
-          backgroundColor="#121212"
+          backgroundColor="#0A2540"
           border="1px solid #C3C3C3"
           height="10vh"
         >
@@ -61,7 +61,7 @@ const DashboardShell = ({ children }) => {
         </Flex>
         <Flex
           justifyContent="flex-start"
-          backgroundColor="#111111"
+          backgroundColor="#0A2540"
           border="1px solid #C3C3C3"
           borderRadius={8}
         >

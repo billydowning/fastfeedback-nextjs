@@ -24,7 +24,7 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Box backgroundColor="#121212">
+      <Box backgroundColor="#0A2540">
         <VStack
           justifyContent="center"
           alignItems="center"
