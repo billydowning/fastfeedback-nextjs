@@ -14,7 +14,7 @@ import {
   ListItem,
   IconButton,
 } from "@chakra-ui/react";
-import { ArrowUpDownIcon, CalendarIcon } from "@chakra-ui/icons";
+import { CalendarIcon } from "@chakra-ui/icons";
 import DogLogo from "@/components/DogLogo";
 
 import { useAuth } from "@/lib/auth";
@@ -24,7 +24,7 @@ const DashboardShell = ({ children }) => {
   const auth = useAuth();
 
   return (
-    <ChakraProvider>
+    <>
       <Flex justifyContent="flex-start" flexDirection="column">
         <Flex
           justifyContent="space-between"
@@ -102,7 +102,7 @@ const DashboardShell = ({ children }) => {
         </Flex>
         {children}
       </Flex>
-    </ChakraProvider>
+    </>
   );
 };
 

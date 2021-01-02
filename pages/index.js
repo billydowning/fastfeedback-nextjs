@@ -19,11 +19,6 @@ const Home = () => {
   const auth = useAuth();
   return (
     <div>
-      <Head>
-        <title>YrLang.com</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <Box backgroundColor="#0A2540">
         <VStack
           justifyContent="center"
