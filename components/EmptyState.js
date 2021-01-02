@@ -17,6 +17,7 @@ import {
 
 import DashboardShell from "./DashboardShell";
 import DogLogo from "@/components/DogLogo";
+import SearchModal from "@/components/SearchModal";
 
 const EmptyState = () => {
   const auth = useAuth();
@@ -59,9 +60,7 @@ const EmptyState = () => {
                     justifyContent="flex-start"
                     m={8}
                   >
-                    <Button variant="solid" size="md">
-                      Explore YrLang
-                    </Button>
+                    <SearchModal />
                   </Stack>
                 </Container>
               </Stack>
