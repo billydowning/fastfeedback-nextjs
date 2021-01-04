@@ -1,6 +1,7 @@
 import DashboardShell from "@/components/DashboardShell";
 import Overview from "@/components/Overview";
 import EmptyState from "@/components/EmptyState";
+import ApptCardSkeleton from "@/components/ApptCardSkeleton";
 import useSWR from "swr";
 import fetcher from "@/utils/fetcher";
 
@@ -17,7 +18,7 @@ const Dashboard = () => {
   // }
   return (
     <DashboardShell>
-      <EmptyState />
+      <ApptCardSkeleton />
     </DashboardShell>
   );
 };

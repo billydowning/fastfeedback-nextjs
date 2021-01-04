@@ -18,6 +18,7 @@ import {
 import { useForm } from "react-hook-form";
 import { useAuth } from "@/lib/auth";
 import { createAppt } from "@/lib/db";
+import Picker from "@/components/Datepicker";
 
 const SearchModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -63,6 +64,7 @@ const SearchModal = () => {
           <ModalHeader fontWeight="bold">Search for a Provider</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
+            <Picker />
             <FormLabel>City:</FormLabel>
             <Select
               placeholder="Select your city"
