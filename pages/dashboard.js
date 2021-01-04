@@ -4,13 +4,17 @@ import EmptyState from "@/components/EmptyState";
 
 import { useAuth } from "@/lib/auth";
 
-const dashboard = () => {
+const Dashboard = () => {
   // const auth = useAuth();
 
   // if (!auth.user) {
   //   return "Loading...";
   // }
-  return <EmptyState />;
+  return (
+    <DashboardShell>
+      <EmptyState />
+    </DashboardShell>
+  );
 };
 
-export default dashboard;
+export default Dashboard;
