@@ -14,11 +14,13 @@ import {
   Image,
 } from "@chakra-ui/react";
 import DogLogo from "@/components/DogLogo";
+import Navbar from "@/components/Navbar";
 
 const Home = () => {
   const auth = useAuth();
   return (
     <div>
+      <Navbar />
       <Box backgroundColor="#0A2540">
         <VStack
           justifyContent="center"
