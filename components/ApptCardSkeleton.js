@@ -2,7 +2,6 @@ import React from "react";
 import NextLink from "next/link";
 import { useAuth } from "@/lib/auth";
 import {
-  ChakraProvider,
   Flex,
   Stack,
   Icon,
@@ -10,16 +9,14 @@ import {
   Link,
   Avatar,
   Heading,
-  Input,
   List,
   ListItem,
-  IconButton,
   Box,
   Skeleton,
   SkeletonCircle,
   SkeletonText,
 } from "@chakra-ui/react";
-import { CalendarIcon } from "@chakra-ui/icons";
+import ActivityFeedSkeleton from "@/components/ActivityFeedSkeleton";
 
 const ApptCardSkeleton = () => {
   const auth = useAuth();
@@ -67,21 +64,7 @@ const ApptCardSkeleton = () => {
             </Stack>
             //Appt card ends here
           </Stack>
-          <Stack spacing={2}>
-            <Stack spacing={2} color="#c0c0c0">
-              <Heading size="sm">Recent Activity:</Heading>
-            </Stack>
-            <Stack spacing={6}>
-              <Skeleton height="20px" mt={2} />
-              <Skeleton height="20px" />
-              <Skeleton height="20px" />
-              <Skeleton height="20px" />
-              <Skeleton height="20px" />
-              <Skeleton height="20px" />
-              <Skeleton height="20px" />
-              <Skeleton height="20px" />
-            </Stack>
-          </Stack>
+          <ActivityFeedSkeleton />
         </Stack>
       </Container>
     </Flex>

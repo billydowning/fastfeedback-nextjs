@@ -8,6 +8,22 @@ import { useAuth } from "@/lib/auth";
 const Navbar = () => {
   const auth = useAuth();
 
+  const renderInbox = () => {
+    if (auth.user) {
+      return (
+        <>
+          <Link>Messages</Link>
+          <NextLink href="/" passHref>
+            <Link>
+              <Avatar mr="20px" size="sm" src={auth.user?.photoUrl} />
+            </Link>
+          </NextLink>
+        </>
+      );
+      return <></>;
+    }
+  };
+
   return (
     <Flex justifyContent="flex-start" flexDirection="column">
       <Flex
@@ -29,12 +45,7 @@ const Navbar = () => {
           <Link>Join Us</Link>
           <Link>Community</Link>
           <Link>Support</Link>
-          <Link>Messages</Link>
-          <NextLink href="/" passHref>
-            <Link>
-              <Avatar mr="20px" size="sm" src={auth.user?.photoUrl} />
-            </Link>
-          </NextLink>
+          {renderInbox()}
         </Stack>
       </Flex>
     </Flex>
