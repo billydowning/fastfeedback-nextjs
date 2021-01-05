@@ -13,12 +13,17 @@ const Dashboard = () => {
 
   console.log(data);
 
-  // if (!auth.user) {
-  //   return "Loading...";
-  // }
+  if (!auth.user) {
+    return (
+      <DashboardShell>
+        <ApptCardSkeleton />
+      </DashboardShell>
+    );
+  }
+
   return (
     <DashboardShell>
-      <ApptCardSkeleton />
+      <EmptyState />
     </DashboardShell>
   );
 };

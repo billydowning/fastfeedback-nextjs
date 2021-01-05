@@ -71,11 +71,8 @@ const ApptCardSkeleton = () => {
             <Stack spacing={2} color="#c0c0c0">
               <Heading size="sm">Recent Activity:</Heading>
             </Stack>
-            <Stack spacing={4}>
+            <Stack spacing={6}>
               <Skeleton height="20px" mt={2} />
-              <Skeleton height="20px" />
-              <Skeleton height="20px" />
-              <Skeleton height="20px" />
               <Skeleton height="20px" />
               <Skeleton height="20px" />
               <Skeleton height="20px" />
