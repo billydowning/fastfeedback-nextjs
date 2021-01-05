@@ -15,6 +15,7 @@ import {
 } from "@chakra-ui/react";
 import DogLogo from "@/components/DogLogo";
 import Navbar from "@/components/Navbar";
+import FadeEffect from "@/components/Fade";
 
 const Home = () => {
   const auth = useAuth();
@@ -29,9 +30,11 @@ const Home = () => {
           h="100vh"
           spacing={4}
         >
-          <Heading size="3xl" color="#c0c0c0" mb={8}>
-            I'm feeling supersonic
-          </Heading>
+          <FadeEffect>
+            <Heading size="3xl" color="#c0c0c0" mb={8}>
+              I'm feeling supersonic
+            </Heading>
+          </FadeEffect>
           <Image h="64" w="64" src="/snow_globe.svg" />
           <Heading size="md" color="#c0c0c0">
             Current User: {auth.user ? auth.user.email : "None"}
