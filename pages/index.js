@@ -18,6 +18,7 @@ import Navbar from "@/components/Navbar";
 
 const Home = () => {
   const auth = useAuth();
+
   return (
     <div>
       <Navbar />

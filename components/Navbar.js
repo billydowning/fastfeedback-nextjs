@@ -2,7 +2,6 @@ import React from "react";
 import NextLink from "next/link";
 import { Flex, Stack, Link, Input, Avatar } from "@chakra-ui/react";
 import DogLogo from "@/components/DogLogo";
-
 import { useAuth } from "@/lib/auth";
 
 const Navbar = () => {
