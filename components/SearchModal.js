@@ -72,7 +72,9 @@ const SearchModal = () => {
               placeholder="Enter your full name"
               name="name"
               ref={register({
-                required: "Required",
+                required: true,
+                minLength: 3,
+                maxLength: 30,
               })}
             />
             {errors.firstName && "Name is required"}
@@ -82,7 +84,7 @@ const SearchModal = () => {
               placeholder="mm/dd/yyyy"
               name="date"
               ref={register({
-                required: "Required",
+                pattern: /(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)\d\d/,
               })}
             />
             <FormLabel>City:</FormLabel>
