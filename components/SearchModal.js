@@ -25,12 +25,14 @@ const SearchModal = () => {
   const toast = useToast();
   const initialRef = useRef();
   const auth = useAuth();
-  const { register, handleSubmit, watch } = useForm();
+  const { register, errors, handleSubmit, watch } = useForm();
 
-  const onCreateAppt = ({ city, language, service }) => {
+  const onCreateAppt = ({ city, language, service, name, date }) => {
     createAppt({
       authorId: auth.user.uid,
       createdAt: new Date().toISOString(),
+      name,
+      date,
       city,
       language,
       service,
@@ -61,10 +63,28 @@ const SearchModal = () => {
           color="#c0c0c0"
           onSubmit={handleSubmit(onCreateAppt)}
         >
-          <ModalHeader fontWeight="bold">Search for a Provider</ModalHeader>
+          <ModalHeader fontWeight="bold">Create An Appointment</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Picker />
+            <FormLabel>Name</FormLabel>
+            <Input
+              id="full-name"
+              placeholder="Enter your full name"
+              name="name"
+              ref={register({
+                required: "Required",
+              })}
+            />
+            {errors.firstName && "Name is required"}
+            <FormLabel>Date:</FormLabel>
+            <Input
+              id="date"
+              placeholder="mm/dd/yyyy"
+              name="date"
+              ref={register({
+                required: "Required",
+              })}
+            />
             <FormLabel>City:</FormLabel>
             <Select
               placeholder="Select your city"
@@ -108,7 +128,7 @@ const SearchModal = () => {
               Cancel
             </Button>
             <Button colorScheme="blue" type="submit">
-              Search
+              Create Appointment
             </Button>
           </ModalFooter>
         </ModalContent>

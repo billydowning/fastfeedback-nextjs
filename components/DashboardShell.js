@@ -15,7 +15,6 @@ import {
   IconButton,
 } from "@chakra-ui/react";
 import { CalendarIcon } from "@chakra-ui/icons";
-import DogLogo from "@/components/DogLogo";
 import Navbar from "@/components/Navbar";
 
 import { useAuth } from "@/lib/auth";

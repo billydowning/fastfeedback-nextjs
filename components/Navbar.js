@@ -1,8 +1,9 @@
 import React from "react";
 import NextLink from "next/link";
 import { Flex, Stack, Link, Input, Avatar } from "@chakra-ui/react";
-import DogLogo from "@/components/DogLogo";
 import { useAuth } from "@/lib/auth";
+import Image from "next/image";
+import LoginModal from "@/components/LoginModal";
 
 const Navbar = () => {
   const auth = useAuth();
@@ -35,7 +36,7 @@ const Navbar = () => {
         <Stack spacing={10} isInline alignItems="center" ml={8}>
           <NextLink href="/" passHref>
             <Link>
-              <DogLogo h="64" w="64" />
+              <Image src="/doglogo.png" height="64" width="64" />
             </Link>
           </NextLink>
           <Input placeholder="Search" variant="outline" color="#c0c0c0" />
@@ -45,6 +46,7 @@ const Navbar = () => {
           <Link>Community</Link>
           <Link>Support</Link>
           {renderInbox()}
+          <LoginModal />
         </Stack>
       </Flex>
     </Flex>

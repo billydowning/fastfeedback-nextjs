@@ -14,7 +14,6 @@ import {
   Link,
   Image,
 } from "@chakra-ui/react";
-import DogLogo from "@/components/DogLogo";
 import Navbar from "@/components/Navbar";
 import FadeEffect from "@/components/Fade";
 
@@ -44,7 +43,6 @@ const Home = () => {
           <Image h="64" w="64" src="/snow_globe.svg" />
           {auth.user ? (
             <>
-              <Button onClick={(e) => auth.signout()}>Sign Out</Button>
               <Button>
                 <NextLink href="/dashboard" passHref>
                   Dashboard
@@ -52,20 +50,7 @@ const Home = () => {
               </Button>
             </>
           ) : (
-            <div>
-              <Button
-                style={{ margin: "10px" }}
-                onClick={(e) => auth.signinWithGitHub()}
-              >
-                Sign In with Github
-              </Button>
-              <Button
-                style={{ margin: "10px" }}
-                onClick={(e) => auth.signinWithGoogle()}
-              >
-                Sign In with Google
-              </Button>
-            </div>
+            <div></div>
           )}
         </VStack>
       </Box>

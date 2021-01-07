@@ -15,7 +15,6 @@ import {
   Flex,
 } from "@chakra-ui/react";
 
-import DogLogo from "@/components/DogLogo";
 import SearchModal from "@/components/SearchModal";
 import ActivityFeed from "@/components/ActivityFeed";
 
