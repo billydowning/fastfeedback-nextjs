@@ -49,7 +49,7 @@ const SearchModal = () => {
 
   return (
     <>
-      <Button variant="solid" size="md" onClick={onOpen}>
+      <Button variant="solid" size="md" onClick={onOpen} colorScheme="blue">
         Explore YrLang
       </Button>
 
@@ -66,7 +66,7 @@ const SearchModal = () => {
           <ModalHeader fontWeight="bold">Create An Appointment</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <FormLabel>Name</FormLabel>
+            <FormLabel>Name:</FormLabel>
             <Input
               id="full-name"
               placeholder="Enter your full name"
