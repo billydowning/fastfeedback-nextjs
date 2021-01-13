@@ -1,6 +1,5 @@
 import Head from "next/head";
 import NextLink from "next/link";
-
 import { useAuth } from "@/lib/auth";
 import {
   Button,
@@ -13,51 +12,57 @@ import {
   VStack,
   Link,
   Image,
+  ChakraProvider,
+  extendTheme,
 } from "@chakra-ui/react";
 import Navbar from "@/components/Navbar";
 import FadeEffect from "@/components/Fade";
+import theme from "@/styles/theme";
 
 const Home = () => {
   const auth = useAuth();
+  const myTheme = extendTheme(theme);
 
   return (
-    <div>
-      <Navbar />
+    <ChakraProvider theme={myTheme}>
+      <div>
+        <Navbar />
 
-      <Box
-        backgroundColor="#0A2540"
-        bgImage="url('/bg4.jpg')"
-        bgPosition="center"
-        bgSize="100%"
-        opacity="80%"
-        bgRepeat="no-repeat"
-      >
-        <VStack
-          justifyContent="flex-start"
-          alignItems="center"
-          h="100vh"
-          spacing={4}
+        <Box
+          backgroundColor="#0A2540"
+          bgImage="url('/bg4.jpg')"
+          bgPosition="center"
+          bgSize="100%"
+          opacity="80%"
+          bgRepeat="no-repeat"
         >
-          <FadeEffect>
-            <Heading size="2xl" color="#0A2540" mb={8} mt={8}>
-              I'm feeling supersonic
-            </Heading>
-          </FadeEffect>
+          <VStack
+            justifyContent="flex-start"
+            alignItems="center"
+            h="100vh"
+            spacing={4}
+          >
+            <FadeEffect>
+              <Heading size="2xl" color="#0A2540" mb={8} mt={8}>
+                I'm feeling supersonic
+              </Heading>
+            </FadeEffect>
 
-          {auth.user ? (
-            <>
-              <Button colorScheme="blue">
-                <NextLink href="/dashboard" passHref>
-                  Dashboard
-                </NextLink>
-              </Button>
-            </>
-          ) : (
-            <div></div>
-          )}
-        </VStack>
-      </Box>
-    </div>
+            {auth.user ? (
+              <>
+                <Button colorScheme="blue">
+                  <NextLink href="/dashboard" passHref>
+                    Dashboard
+                  </NextLink>
+                </Button>
+              </>
+            ) : (
+              <div></div>
+            )}
+          </VStack>
+        </Box>
+      </div>
+    </ChakraProvider>
   );
 };
 
