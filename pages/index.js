@@ -30,27 +30,21 @@ const Home = () => {
 
         <Box
           backgroundColor="#0A2540"
-          bgImage="url('/bg4.jpg')"
+          bgImage="url('/bg5.jpg')"
           bgPosition="center"
           bgSize="100%"
           opacity="80%"
           bgRepeat="no-repeat"
         >
           <VStack
-            justifyContent="flex-start"
+            justifyContent="center"
             alignItems="center"
             h="100vh"
             spacing={4}
           >
-            <FadeEffect>
-              <Heading size="2xl" color="#0A2540" mb={8} mt={8}>
-                I'm feeling supersonic
-              </Heading>
-            </FadeEffect>
-
             {auth.user ? (
               <>
-                <Button colorScheme="blue">
+                <Button colorScheme="red">
                   <NextLink href="/dashboard" passHref>
                     Dashboard
                   </NextLink>
